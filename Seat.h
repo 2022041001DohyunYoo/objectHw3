@@ -1,5 +1,5 @@
-#ifndef ADD_H
-#define ADD_H
+#ifndef Seat_H
+#define Seat_H
 
 #include <iostream>
 #include <string>
@@ -8,11 +8,13 @@ using namespace std;
 class Seat{
 private:
     string Name = "-----";
-    bool isBooked = false;
+    bool Booked = false;
 
 public:
 
+string getName(){return Name;}
 void setName(string name){this->Name = name;}
+bool isBooked(){return isBooked;}
 void Book(string name);
 void Cancel();
 void show();
