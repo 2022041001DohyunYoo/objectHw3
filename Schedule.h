@@ -11,9 +11,13 @@ private:
     Seat seatArr[8];
 
 public:
-    void Book(int num, string name);
-    void Cancel(int num, string name);
+
+    Schedule(){
+        for(int i = 0; i < 8; i++) seatArr[i].setName("-----");}
+    void Book(int num, const string &name);
+    void Cancel(int num, const string &name);
     void Show();
+
 };
 
 

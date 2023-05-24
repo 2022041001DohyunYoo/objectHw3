@@ -7,15 +7,18 @@ using namespace std;
 
 class Seat{
 private:
-    string Name = "-----";
+    string Name;
     bool Booked = false;
 
 public:
 
+
+Seat(){this->Name = "-----";}
+Seat(string &name){this->Name = name;}
 string getName(){return Name;}
 void setName(string name){this->Name = name;}
-bool isBooked(){return isBooked;}
-void Book(string name);
+bool isBooked(){return this->Booked;}
+void Book(const string &name);
 void Cancel();
 void show();
 

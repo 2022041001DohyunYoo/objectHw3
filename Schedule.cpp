@@ -1,6 +1,6 @@
 #include "Schedule.h"
 
-void Schedule::Book(int num, string name){
+void Schedule::Book(int num, const string & name){
     if(seatArr[num-1].isBooked() == false && num <= 8 && num > 0){
         seatArr[num-1].Book(name);
     }
@@ -8,7 +8,7 @@ void Schedule::Book(int num, string name){
         cout << "이미 예약된 좌석입니다."<< endl;
     }
 }
-void Schedule::Cancel(int num, string name){
+void Schedule::Cancel(int num, const string & name){
     if(seatArr[num-1].isBooked() == false && num <= 8 && num > 0){
         cout<<"입력하신 예약은 존재하지 않습니다.";
     }

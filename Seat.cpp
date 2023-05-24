@@ -1,6 +1,6 @@
 #include "Seat.h"
 
-void Seat:: Book(string name){
+void Seat:: Book(const string &name){
     this->Name = name;
     Booked = true;
 }
